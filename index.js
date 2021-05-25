@@ -66,12 +66,26 @@ let html = `
       margin-left: auto;
       margin-right: auto;
     }
+
+    .subtitle {
+      color: #4a4a4a;
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 1.25;
+    }
     </style>
   </head>
-  <body>\n`;
+  <body>
+    <p><strong>${pages.length}</strong> Pages.</p>
+    <p>Total Size: <strong>${psize}</strong></p>
+    <p class="subtitle">Generated at ${new Date().toDateString()}</p>\n`;
 
 for (const page of pages) {
-  html += `    <p class="box"><a href="${page.url}">${page.name}</a></p>\n`;
+  html += `    <div class="box">
+      <a target="_blank" href="${page.url}">${page.name}</a>
+      <p class="subtitle">Size: ${hsize(page.size)}</p>
+      <p class="subtitle">Date: ${page.date.toDateString()}</p>
+    </div>\n`;
 }
 
 html += "  </body>\n</html>";
