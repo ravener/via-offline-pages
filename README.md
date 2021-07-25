@@ -38,7 +38,7 @@ Just something I decided to open source for no reason.
 
 ## TODO
 - ~~Show date in the list.~~
-- Add a button to jump to the bottom of the page quickly.
+- ~~Add a button to jump to the top of the page quickly.~~
 - Other sorting options, e.g sort by largest file size.
 
 ## License

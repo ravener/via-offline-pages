@@ -22,7 +22,7 @@ for (const path of paths) {
       url: "file://" + join(path, encodeURIComponent(file)),
       date: stats.mtime,
       size: stats.size,
-      name: file.slice(0, -3).trim()
+      name: file.slice(0, -4).trim()
     });
   }
 }
@@ -116,7 +116,7 @@ let html = `
     </script>
     <p><strong>${pages.length}</strong> Pages.</p>
     <p>Total Size: <strong>${psize}</strong></p>
-    <p class="subtitle">Generated at ${new Date().toDateString()}</p>\n`;
+    <p class="subtitle">Generated at ${new Date().toDateString()} using <a href="https://github.com/ravener/via-offline-pages">Via Offline Pages</a></p>\n`;
 
 for (const page of pages) {
   html += `    <div class="box">
